@@ -22,8 +22,8 @@ class StatisticsUtilsTest {
 
         // Check the result
         // Then the percentages are 100 and 0
-        assertEquals(0f, result.completedTasksPercent)
-        assertEquals(100f, result.activeTasksPercent)
+        assertThat(result.completedTasksPercent, `is`(0f))
+        assertThat(result.activeTasksPercent, `is`(100f))
     }
 
     @Test
@@ -56,8 +56,8 @@ class StatisticsUtilsTest {
 
         // Check the result
         // Then the result is 40-60
-        assertEquals(40f, result.activeTasksPercent)
-        assertEquals(60f, result.completedTasksPercent)
+        assertThat(result.activeTasksPercent, `is`(40f))
+        assertThat(result.completedTasksPercent, `is`(60f))
     }
 
     @Test
@@ -66,8 +66,8 @@ class StatisticsUtilsTest {
         val result = getActiveAndCompletedStats(null)
 
         // Both active and completed tasks are 0
-        assertEquals(0f, result.activeTasksPercent)
-        assertEquals(0f, result.completedTasksPercent)
+        assertThat(result.activeTasksPercent, `is`(0f))
+        assertThat(result.completedTasksPercent, `is`(0f))
     }
 
     @Test
@@ -76,8 +76,8 @@ class StatisticsUtilsTest {
         val result = getActiveAndCompletedStats(emptyList())
 
         // Both active and completed tasks are 0
-        assertEquals(0f, result.activeTasksPercent)
-        assertEquals(0f, result.completedTasksPercent)
+        assertThat(result.activeTasksPercent, `is`(0f))
+        assertEquals(result.completedTasksPercent, `is`(0f))
     }
 
 }
