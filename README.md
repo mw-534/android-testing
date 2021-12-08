@@ -1,3 +1,6 @@
+Based on starter code from:
+https://github.com/udacity/android-testing/tree/starter_code
+
 TO-DO Notes - Code for 5.1-5.3 Testing Codelab
 ============================================================================
 
